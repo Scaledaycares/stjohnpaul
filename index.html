@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot Example</title>
+  <link rel="stylesheet" href="chatbot-widget.css">
+</head>
+<body>
+  <audio id="pop-sound" src="https://cdn.glitch.global/01a66850-f583-4369-9887-fcb7f2aecbf6/323743__reitanna__mouth-pop5.wav?v=1716411364280" preload="auto"></audio>
+   <div id="calendly-widget-container" style="display:none;">
+    <button id="back-to-chatbot">Back to Chatbot</button>
+<iframe src="https://api.leadconnectorhq.com/widget/booking/w5pSzsGYmL3bAgLPo6Dt" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="w5pSzsGYmL3bAgLPo6Dt_1750867463114"></iframe><br><script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+  </div>
+  <button id="chatbot-toggle">
+    <img id="icon-img" src="https://cdn.glitch.global/b3ab09eb-1116-4be8-a7e0-1c7e203a9b89/24-242263_chat-speech-bubble-with-text-lines-comments-speech-removebg-preview.png?v=1691191893430" alt="chat-image">
+  </button>
+  <div id="chat-widget" style="display: none;">
+    <div class="tour-booking">
+      <a href="#" id="book-tour-link">Click here to book a tour</a>
+    </div>
+    <div class="chatbot-header">
+      <div class="chatbot-header-line">
+        <div>
+          <div class="chat-box-title-line">
+            <h4 class="chat-box-title">AI Assistant</h4>
+          </div>
+          <p id="intro">
+            Hi, I am a personal AI assistant, ask me anything you want to know about St.John Paul II Regional School!
+          </p>
+        </div>
+        <a href="#" class="close-btn" id="chatbot-close">
+          <img src="https://pub-files-live.illions.com/live/Blockstation/2288/3bdb0f23-caa3-4282-9d7f-27f940d0791b/6c931259-b710-4171-9ddd-672694c4642d.svg" />
+        </a>
+      </div>
+    </div>
+    <div id="chatbox"></div>
+    <form id="chat-form">
+      <input type="text" id="chat-input" value="Ask a question" />
+      <button type="submit" id="messagebtn">
+      </button>
+    </form>
+  </div>
+  <script defer src="chatbot-widget.js"></script>
+ 
+</body>
+</html>
+

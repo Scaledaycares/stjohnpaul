@@ -1,0 +1,414 @@
+     /* Your CSS code here */
+     body {
+      font-family: Arial, sans-serif;
+    }
+ #chatbot-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 480px;
+      background-color:#881c34;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1;
+    }
+     #icon-img{
+       width: 45px;
+      height: 45px;
+     }
+    #chat-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 425px;
+      height: 450px;
+      background-color:#881c34;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    #chatbox {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background-color:white;
+    }
+    
+    .chat-user {
+      text-align: right;
+      color: #881c34;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 12px 0;
+    }
+    
+    .chat-assistant {
+      position: relative;
+      max-width: 315px;
+      text-align: left;
+      color: #0D082C;
+      font-size: 16px;
+      line-height: 22px;
+      padding-left: 30px;
+      margin: 12px 0;
+    }
+    
+    #chat-form {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      border-top: 1px solid #E0E0E0;
+      background-color: #F5F5F5;
+    }
+    
+    #chat-input {
+      background-color: transparent;
+      color: #0D082C99;
+      font-size: 16px;
+      font-width: 600;
+      line-height: 24.34px;
+      flex-grow: 1;
+      border: 0;
+      outline: 0;
+      border-radius: 0;
+      padding: 0;
+      margin-right: 10px;
+    }
+
+#chat-input::placeholder {
+color: #0D082C99;
+font-size: 16px;
+font-width: 600;
+line-height: 24.34px;
+}
+
+#chat-input:focus {
+color: #000000;
+}
+    
+    button {
+      background-color: #881c34;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #881c34;
+    }
+.chatbot-header {
+color: white; /* Set the text color */
+background-color:#881c34 ;
+padding: 16px; /* Add some padding for a nicer look */
+font-weight: bold; /* Make the text bold */
+border: 2px solid #FFFFFF;
+border-radius: 16px 16px 0 0; 
+}
+
+.chatbot-header-line {
+display: flex;
+gap: 12px;
+}
+
+.chatbot-header-line .close-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 24px;
+height: 24px;
+background-color: black;
+border-radius: 50%;
+}
+
+.chatbot-header-line .close-btn img {
+width: 14.4px;
+}
+
+.chat-box-title-line {
+flex: 1;
+display: flex;
+align-items: center;
+padding: 0 0 2px 0;
+}
+
+.chat-box-title {
+flex: 1;
+font-family: "Titillium Web", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+font-size: 18px;
+line-height: 27.38px;
+font-weight: 700;
+margin: 0;
+color:white !important;
+}
+
+.chat-box-title-line .invest-btn {
+
+background: #F26722;
+font-size: 14px;
+line-height: 21.29px;
+font-weight: 700;
+padding: 2px 12px;
+}
+
+.chat-box-title-line .invest-btn:hover {
+text-decoration: none;
+}
+
+.chatbot-header p {
+font-size: 14px;
+line-height: 18.2px;
+font-weight: 400;
+margin: 0;
+color:white;
+}
+
+.chatbot-helper {
+position: absolute;
+top: 35px;
+right: 0;
+font-size: 7px; /* Adjust the font size as needed */
+color: #ffffff; /* Adjust the text color as needed */
+padding: 2px 5px;
+}
+.chat-assistant::before {
+position: absolute;
+top: -1px;
+left: 0;
+content: "";
+display: inline-block;
+width: 22px;
+height: 22px;
+background-image: url('https://cdn.glitch.global/e86b8bcd-46f8-425f-af85-5dfd4ac643f9/businessman-in-suit-head-vector-icon-removebg-preview%20(1).png?v=1696911328271'); /* Replace with the actual image URL */
+background-size: cover;
+vertical-align: middle;
+}
+#intro{
+      bottom: 300px;
+      color: white;
+      top: auto;
+    }
+
+#messagebtn {
+width: 32px !important;
+height: 32px !important;
+background-color: #881c34 !important;
+border-radius: 50% !important;
+background-image: url('https://pub-files-live.illions.com/live/Blockstation/2288/ae20d128-a64c-45b1-89d6-f675238bdf25/e278a15d-7888-43f4-b853-de2a54e970c7.svg') !important;
+background-repeat: no-repeat !important;
+background-position: center !important;
+background-size: 16px 16px !important; /* Adjust size to fit the button */
+border: none !important;
+cursor: pointer !important;
+}
+
+
+.loading-dots {
+display: flex;
+align-items: center;
+ justify-content: flex-start; /* Changed from center to flex-start */
+margin: 10px 0;
+}
+
+.loading-dots > div {
+width: 8px;
+height: 8px;
+margin: 0 2px;
+background-color:#881c34; /* Or any color that suits your chatbox */
+border-radius: 50%;
+animation: loading-animation 1.4s infinite ease-in-out both;
+}
+
+.loading-dots > div:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots > div:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes loading-animation {
+0%, 80%, 100% { transform: scale(0); }
+40% { transform: scale(1.0); }
+}
+
+
+.loading-dots span {
+margin-left: 5px;
+color: #881c34; /* Adjust color as needed */
+font-size: 14px; /* Adjust font size as needed */
+}
+a{
+color:#f86424;
+text-decoration:none;
+}
+#contactus{
+background-color: green; /* Green background */
+  padding: 10px; /* Padding for some space inside the box */
+  text-align: center; /* Center the text */
+  color: white; /* White text color */
+  font-size: 14px; /* Adjust font size as needed */
+  border-top-left-radius: 10px; /* Match the border radius of the chat widget */
+  border-top-right-radius: 10px; /* Match the border radius of the chat widget */
+display: block; /* Ensures it takes the full width */
+}
+a:hover {
+  text-decoration: underline; /* Adds underline on hover for better user experience */
+}
+
+
+@media screen and (max-width: 490px) {
+  #chat-widget {
+    width: 346px;
+    max-width: none;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  #chat-widget {
+    width: 290px;
+  }
+  .chat-box-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .chatbot-header p {
+    font-size: 12px;
+    line-height: 16.2px;
+  }
+  #chat-input, .chat-assistant, .chat-user {
+    font-size: 14px;
+  }
+  .chat-assistant::before {
+    width: 20px;
+    height: 20px;
+  }
+  #chat-form {
+    padding: 6px 16px;
+  }
+}
+.tour-booking {
+  background-color: green;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+}
+
+.tour-booking a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.tour-booking a:hover {
+  text-decoration: underline;
+}
+#calendly-widget-container {
+  position: fixed;
+  bottom: 45px;
+  right: 0px;
+  width: 425px; /* Increased width */
+  height: 450px; /* Adjusted height to make it square */
+  z-index: 100;
+  display: none;
+  overflow: auto;
+}
+#back-to-chatbot {
+   position: relative;
+  top: 30px;
+  right: 0px;
+  z-index: 105;
+  background-color: orange;
+  color: black;
+  border: 1px solid #dddddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+#NSSHfWptfupkUZRjpAgR_1719878735200 {
+  width: 100%; /* Make iframe take full width of the container */
+  height: 100%; /* Make iframe take full height of the container */
+  border: none;
+  overflow: hidden;
+}
+#loc{
+  position:fixed;
+  bottom:420px;
+  right:20px;
+  color: white; /* Set the text color */
+  background-color:green ;
+  padding: 16px; /* Add some padding for a nicer look */
+  font-weight: bold; /* Make the text bold */
+  border: 2px solid #FFFFFF;
+  border:5px solid black;
+  border-bottom-left-radius: 0; /* No rounding on top */
+  border-bottom-right-radius: 0; /* No rounding on top */
+  border-top-left-radius: 10px; /* Rounded at the bottom */
+  border-top-right-radius: 10px; /* Rounded at the bottom */
+  width:385px;
+  text-align:center;
+}
+.location-button {
+  font-size:50px;
+  height: 210px;
+  width: 425px;
+  background-color: #881c34; /* Example background color */
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:fixed;
+  right:20px;
+  font-weight:bold;
+  border-left: 5px solid black; /* White outline on the left */
+  border-right: 5px solid black; /* White outline on the right */
+  border-bottom:2px solid black;
+  border-top:5px solid black;
+}
+#btn1{
+  position:fixed;
+  bottom:230px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom:none;
+  border-radius:0;
+}
+#btn2{
+  position:fixed;
+  bottom:20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color:white;
+}
+/* Your existing CSS here */
+
+@media screen and (max-width: 768px) {
+   #chat-widget{
+    position:fixed;
+    bottom:50px;
+  }
+   #calendly-widget-container{
+    transform:scale(0.9);
+  }
+}
+
+#link{
+  color:white;
+}
