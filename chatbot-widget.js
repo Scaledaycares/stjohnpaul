@@ -29,17 +29,17 @@ function sendInputToGAS3(message, isUserMessage) {
 }
 
 
-function toggleChatbot() {
-   document.getElementById('calendly-widget-container').style.display = 'none';
-    var chatWidget = document.getElementById("chat-widget");
-    if (chatWidget.style.display === "none") {
-        chatWidget.style.display = "flex";
-        localStorage.setItem('chatbotOpen', 'true');
-    } else {
-        chatWidget.style.display = "none";
-        localStorage.setItem('chatbotOpen', 'false');
-    }
-}
+// function toggleChatbot() {
+//    document.getElementById('calendly-widget-container').style.display = 'none';
+//     var chatWidget = document.getElementById("chat-widget");
+//     if (chatWidget.style.display === "none") {
+//         chatWidget.style.display = "flex";
+//         localStorage.setItem('chatbotOpen', 'true');
+//     } else {
+//         chatWidget.style.display = "none";
+//         localStorage.setItem('chatbotOpen', 'false');
+//     }
+// }
 function convertTextToHtml(text) {
     let replacedText = text.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
         return '<a href="' + url + '" target="_blank">' + url + '</a>';
@@ -55,14 +55,14 @@ function convertTextToHtml(text) {
     return replacedText;
 }
 
-document.getElementById("chatbot-toggle").addEventListener("click", toggleChatbot);
-const closeButton = document.getElementById('chatbot-close');
+//document.getElementById("chatbot-toggle").addEventListener("click", toggleChatbot);
+//const closeButton = document.getElementById('chatbot-close');
 const chatWidget = document.getElementById('chat-widget');
 
-closeButton.addEventListener('click', () => {
-    event.preventDefault();  // Prevent the default form submission behavior
-    chatWidget.style.display = 'none';
-});
+// closeButton.addEventListener('click', () => {
+//     event.preventDefault();  // Prevent the default form submission behavior
+//     chatWidget.style.display = 'none';
+// });
 
 let currentThreadId = null;
 
